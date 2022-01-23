@@ -47,10 +47,10 @@ use "village_level", clear
 	reg 	`depvar' ELF $controlvars
 
 			areg  `depvar' ELF if e(sample), robust a(wardID)
-			areg  `depvar' ELF $controlvars, robust a(wardID)
-			areg  `depvar' ELF $controlvars if `depvar'>7.17, robust a(wardID)
-			areg  `depvar' ELF $controlvars_ethn_dummies, robust a(wardID)
-			areg  `depvar' ELF $controlvars_ethn_dummies if `depvar'>7.17, robust a(wardID)
+			areg  `depvar' ELF weighted_forest_cover $controlvars, robust a(wardID)
+			areg  `depvar' ELF weighted_forest_cover $controlvars if weighted_forest_cover>7.17, robust a(wardID)
+			areg  `depvar' ELF weighted_forest_cover $controlvars_ethn_dummies, robust a(wardID)
+			areg  `depvar' ELF weighted_forest_cover $controlvars_ethn_dummies ifweighted_forest_cover>7.17, robust a(wardID)
 
 		
 	******************************************************************************************************************************************************************************
