@@ -50,7 +50,7 @@ use "village_level", clear
 			areg  `depvar' ELF weighted_forest_cover $controlvars, robust a(wardID)
 			areg  `depvar' ELF weighted_forest_cover $controlvars if weighted_forest_cover>7.17, robust a(wardID)
 			areg  `depvar' ELF weighted_forest_cover $controlvars_ethn_dummies, robust a(wardID)
-			areg  `depvar' ELF weighted_forest_cover $controlvars_ethn_dummies ifweighted_forest_cover>7.17, robust a(wardID)
+			areg  `depvar' ELF weighted_forest_cover $controlvars_ethn_dummies if weighted_forest_cover>7.17, robust a(wardID)
 
 		
 	******************************************************************************************************************************************************************************
